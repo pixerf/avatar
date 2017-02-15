@@ -25,7 +25,6 @@ defmodule Avatar do
     cache = Keyword.get(opts, :cache, true)
     initial = initial(name)
     a_size = [size, @fullsize] |> Enum.min
-    IO.inspect initial
     do_generate(initial, a_size, cache)        
   end  
 
@@ -58,7 +57,7 @@ defmodule Avatar do
     initials = 
     Enum.map(String.split(name, " "), fn(t) -> 
       [h|t] = String.codepoints(t)
-      h
+      String.upcase(h)
     end)    
     |> to_string
     |> String.slice(0..1)
@@ -119,7 +118,7 @@ defmodule Avatar do
       "-extent", "#{width}x#{height}",
       "-interpolate", "bicubic",
       "-unsharp", "2x0.5+0.7+0",
-      "-quality", "98",
+      "-quality", "40",
       "#{to}"
     ]
   end
