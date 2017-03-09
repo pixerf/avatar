@@ -98,7 +98,7 @@ defmodule Avatar do
       "-size", "#{size}x#{size}",
       "xc:#{to_rgb(identity.color)}",
       # "-pointsize", "140",
-      "-pointsize", "100",
+      "-pointsize", "120",
       "-font", "#{@font_filename}",
       "-weight", "#{Avatar.Config.weight}",
       "-fill", "#{@fill_color}",
@@ -116,7 +116,7 @@ defmodule Avatar do
       "-gravity", "center",
       "-thumbnail", "#{width}x#{height}^",
       "-extent", "#{width}x#{height}",
-      "-interpolate", "bicubic",
+      "-interpolate", "catrom",
       "-unsharp", "2x0.5+0.7+0",
       "-quality", "40",
       "#{to}"
