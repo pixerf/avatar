@@ -103,7 +103,7 @@ defmodule Avatar do
       "xc:#{to_rgb(identity.color)}",
       # "-pointsize", "140",
       "-pointsize", "120",
-      "-font", "#{@font_filename}",
+      "-font", "#{font_filename}",
       "-weight", "#{Avatar.Config.weight}",
       "-fill", "#{@fill_color}",
       "-gravity", "Center",
