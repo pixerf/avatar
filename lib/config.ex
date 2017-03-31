@@ -26,6 +26,10 @@ defmodule Avatar.Config do
     Keyword.get(config, :cache_base_path, "static")
   end
 
+  def font_filename do
+    Keyword.get(config, :font_filename)
+  end
+
   @doc """
   app_name
   """

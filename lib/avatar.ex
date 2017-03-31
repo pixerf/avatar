@@ -6,7 +6,7 @@ defmodule Avatar do
   @fullsize 240
   @fill_color "rgba(255, 255, 255, 0.65)"
   # @font_filename Path.join(__DIR__, "data/OpenSans-Semibold.ttf")
-  @font_filename Path.join(__DIR__, "data/ARIALUNI.TTF")
+  # @font_filename Path.join(__DIR__, "data/ARIALUNI.TTF")
 
   @doc """
   ## Examples
@@ -71,6 +71,10 @@ defmodule Avatar do
     %{color: color, letter: letter}
   end
 
+  defp font_filename do
+    "#{Avatar.Config.font_filename}"
+  end
+  
   defp cache_path do
     "#{Avatar.Config.cache_base_path}/avatar"
   end
