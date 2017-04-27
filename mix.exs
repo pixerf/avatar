@@ -3,7 +3,7 @@ defmodule Avatar.Mixfile do
 
   def project do
     [app: :avatar,
-     version: "0.1.2",
+     version: "0.1.3",
      elixir: "~> 1.2",
      description: description,
      build_embedded: Mix.env == :prod,

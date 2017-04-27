@@ -55,7 +55,7 @@ defmodule Avatar do
 
   defp initial(name) do
     initials = 
-    Enum.map(String.split(name, " "), fn(t) -> 
+    Enum.map(String.split(name), fn(t) -> 
       [h|t] = String.codepoints(t)
       String.upcase(h)
     end)    
